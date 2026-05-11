@@ -316,3 +316,36 @@ resource "aws_iam_role_policy_attachment" "ecs_task_execution_policy" {
   role       = aws_iam_role.ecs_task_execution_role.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
 }
+# =========================================================
+# OUTPUTS - INFRA AWS (ALB / ECS / RDS)
+# =========================================================
+
+# URL pública da aplicação
+output "alb_dns" {
+  description = "DNS público do Application Load Balancer"
+  value       = aws_lb.alb.dns_name
+}
+
+# Endpoint do banco PostgreSQL
+output "rds_endpoint" {
+  description = "Endpoint do RDS PostgreSQL"
+  value       = aws_db_instance.postgres123.address
+}
+
+# Porta do banco
+output "rds_port" {
+  description = "Porta do RDS PostgreSQL"
+  value       = aws_db_instance.postgres123.port
+}
+
+# Nome do cluster ECS
+output "ecs_cluster_name" {
+  description = "Nome do cluster ECS"
+  value       = aws_ecs_cluster.cluster.name
+}
+
+# ARN do cluster ECS
+output "ecs_cluster_arn" {
+  description = "ARN do cluster ECS"
+  value       = aws_ecs_cluster.cluster.arn
+}

@@ -8,6 +8,12 @@
 
 Este projeto tem como objetivo provisionar e disponibilizar publicamente uma API containerizada utilizando serviços gerenciados da AWS, seguindo boas práticas de arquitetura em nuvem, segurança, escalabilidade e infraestrutura como código.
 
+Acesso à aplicação
+
+A aplicação está exposta através do Application Load Balancer:
+
+- URL pública: http://tf-lb-20260511055853433900000009-181788438.us-east-1.elb.amazonaws.com
+
 
 
 **A solução utiliza:**
