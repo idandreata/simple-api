@@ -1,0 +1,23 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+
+# Node
+node_modules/
+
+# Env
+.env
+
+# Logs
+*.log
+
+# Keys
+*.pem
+*.ppk
+*.csv
+
+# OS
+.DS_Store
+Thumbs.db
