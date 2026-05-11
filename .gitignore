@@ -7,7 +7,7 @@ terraform.tfvars
 # Node
 node_modules/
 
-# Env
+# Environment
 .env
 
 # Logs
